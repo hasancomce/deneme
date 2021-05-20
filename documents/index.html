@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Materia Trial last</title>
+</head>
+<body>
+
+
+        <div class="card-header">Materia Trial</div>
+        <div class="card-body">
+        <button id = "get" class="btn btn-primary" >Ürünleri getir</button>
+        <!-- <form id = "product-form" name="form">
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="MATERIA_CODE" id = "MATERIA_CODE" placeholder="Materia Kod">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="TYPE" id = "TYPE" placeholder="Cinsi">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="INGREDIENT" id = "INGREDIENT" placeholder="İçerik">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="HOMELAND" id = "HOMELAND" placeholder="Anavatanı">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="PRODUCER_TRADEMARK" id = "PRODUCER_TRADEMARK" placeholder="Marka(Üretici)">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="MODEL" id = "MODEL" placeholder="Model">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="PATTERN" id = "PATTERN" placeholder="Desen">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="COLOR" id = "COLOR" placeholder="Renk">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="SURFACE_FINISH" id = "SURFACE_FINISH" placeholder="Yüzey - Finish">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="MEASURE" id = "MEASURE" placeholder="Ölçü">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="THICKNESS" id = "THICKNESS" placeholder="Kalınlık">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="WEIGHT" id = "WEIGHT" placeholder="Ağırlık">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="USAGE_AREA" id = "USAGE_AREA" placeholder="Kullanım Alanı">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="PERFORMANCE" id = "PERFORMANCE" placeholder="Performans">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="UV_RESISTANCE" id = "UV_RESISTANCE" placeholder="UV Dayanıklılık">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="FIRE_CERTIFICATES" id = "FIRE_CERTIFICATES" placeholder="Yangın Sertifikaları">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="OTHER_CERTIFICATES" id = "OTHER_CERTIFICATES" placeholder="Diğer Sertifikalar">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="SUSTAINABILITY_LEED" id = "SUSTAINABILITY_LEED" placeholder="Sürdürülebilirlik">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="TECHNICIAL_SPECIFICATIONS" id = "TECHNICIAL_SPECIFICATIONS" placeholder="Teknik Özellikler">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="WARRANTY" id = "WARRANTY" placeholder="Garanti">
+                </div>
+                <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="NOTES" id = "NOTES" placeholder="Notlar">
+                </div>
+                </div>
+                <button type="submit" class="btn btn-danger">Ürün Ekle</button>
+        </form>
+        <hr> -->
+        <!-- <button id = "update" class="btn btn-dark" style="display:none;">Ürünü Güncelle</button>
+        <hr> -->
+        </div>
+        <div class="card-body">
+        <hr>
+        <h5 class="card-title" id = "products-title">Ürünler</h5>
+        <hr>
+        <table class="table table-dark">
+                <thead>
+                <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Materia Kod</th>
+                        <th scope="col">Cinsi</th>
+                        <th scope="col">İçerik</th>
+                        <th scope="col">Anavatanı</th>
+                        <th scope="col">Marka(Üretici)</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Desen</th>
+                        <th scope="col">Renk</th>
+                        <th scope="col">Yüzey</th>
+                        <th scope="col">Ölçü</th>
+                        <th scope="col">Kalınlık</th>
+                        <th scope="col">Ağırlık</th>
+                        <th scope="col">Kullanım Alanı</th>
+                        <th scope="col">Performans</th>
+                        <th scope="col">UV Dayanıklılık</th>
+                        <th scope="col">Yangın Sertifikaları</th>
+                        <th scope="col">Diğer Sertifikalar</th>
+                        <th scope="col">Sürdürülebilirlik</th>
+                        <th scope="col">Teknik Özellikler</th>
+                        <th scope="col">Garanti</th>
+                        <th scope="col">Notlar</th>
+
+                </tr>
+                </thead>
+                <tbody id = "products">
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            <!--        <td><a href="#" id = "update-product" class= "btn btn-danger">Güncelle</a></td> 
+                        <td> <a href="#" id = "delete-product" class= "btn btn-danger">Sil</a></td>  
+                    </tr> -->
+                </tbody>
+        </table>
+        <hr>
+        </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  
+
+</body>
+</html>

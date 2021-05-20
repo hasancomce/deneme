@@ -1,0 +1,69 @@
+<div class="card-body">
+    <h5 class="card-title" id = "products-title">Ürünler</h5> 
+    <table id="idid" class="table table-sm table-striped">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Materia Kod</th>
+                <th scope="col">Image</th>
+                <th scope="col">Cinsi</th>
+                <th scope="col">İçerik</th>
+                <th scope="col">Anavatanı</th>
+                <th scope="col">Marka(Üretici)</th>
+                <th scope="col">Model</th>
+                <th scope="col">Desen</th>
+                <th scope="col">Renk</th>
+                <th scope="col">Yüzey</th>
+                <th scope="col">Ölçü</th>
+                <th scope="col">Kalınlık</th>
+                <th scope="col">Ağırlık</th>
+                <th scope="col">Kullanım Alanı</th>
+                <th scope="col">Performans</th>
+                <th scope="col">UV Dayanıklılık</th>
+                <th scope="col">Yangın Sertifikaları</th>
+                <th scope="col">Diğer Sertifikalar</th>
+                <th scope="col">Sürdürülebilirlik</th>
+                <th scope="col">Teknik Özellikler</th>
+                <th scope="col">Garanti</th>
+                <th scope="col">Notlar</th>
+            </tr>
+        </thead>
+        {{#each items}}
+        <tbody>
+            <tr>
+                <td><a href="/items/{{_id}}" class="btn btn-danger btn-sm">Güncelle</a></td> 
+                <td><a href="/items/delete/{{_id}}" onclick="return confirm('Bu ürünü silmek istediğinize emin misiniz?')" class="btn btn-danger btn-sm">Sil</a></td>
+                <td>{{MATERIA_CODE}} </td>
+                <td><img class="img-fluid" src="{{IMAGE}}"></td>
+                <td>{{TYPE}} </td>
+                <td>{{INGREDIENT}} </td>
+                <td>{{HOMELAND}} </td>
+                <td>{{PRODUCER_TRADEMARK}} </td>
+                <td>{{MODEL}} </td>
+                <td>{{PATTERN}} </td>
+                <td>{{COLOR}} </td>
+                <td>{{SURFACE_FINISH}} </td>
+                <td>{{MEASURE}} </td>
+                <td>{{THICKNESS}} </td>
+                <td>{{WEIGHT}} </td>
+                <td>{{USAGE_AREA}} </td>
+                <td>{{PERFORMANCE}} </td>
+                <td>{{UV_RESISTANCE}} </td>
+                <td>{{FIRE_CERTIFICATES}} </td>
+                <td>{{OTHER_CERTIFICATES}} </td>
+                <td>{{SUSTAINABILITY_LEED}} </td>
+                <td>{{TECHNICIAL_SPECIFICATIONS}} </td>
+                <td>{{WARRANTY}} </td>
+                <td>{{NOTES}} </td>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div>
+
+<script>
+        $(document).ready( function () {
+            $('#idid').DataTable();
+        } );
+    </script>

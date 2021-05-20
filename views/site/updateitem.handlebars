@@ -1,0 +1,91 @@
+<div class="container-fluid">
+        <form id = "product-form" name="form" action="/updateitem" method="POST" enctype="multipart/form-data">   
+                <br>
+                <h5 class="card-title" id = "products-title">Ürün Güncelleme Formu</h5>
+                <hr>
+                <div class="card-body text-center">
+                        <div class="row col-md-12">    
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Ürün ID</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="_id" id = "_id" value="{{item._id}}" readonly>
+                                </div>
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Materia Kod</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="MATERIA_CODE" id = "MATERIA_CODE" value="{{item.materia_id}}">
+                                </div>
+                        </div> 
+                        <div class="row col-md-12">    
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Cinsi</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="TYPE" id = "TYPE" value="{{item.category_id}}">
+                                </div>
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">İçerik</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="INGREDIENT" id = "INGREDIENT" value="{{item.color}}">
+                                </div>
+                        </div> 
+                        <div class="row col-md-12">
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Anavatanı</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="HOMELAND" id = "HOMELAND" value="{{item.brand_id}}">
+                                </div>
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Marka(Üretici)</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="PRODUCER_TRADEMARK" id = "PRODUCER_TRADEMARK" value="{{item.model_no}}">
+                                </div>
+                        </div>
+                        <div class="row col-md-12">
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Model</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="MODEL" id = "MODEL" value="{{item.model_name}}">
+                                </div>
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Desen</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="PATTERN" id = "PATTERN" value="{{item.surface_finish}}">
+                                </div>
+                        </div>
+                        <div class="row col-md-12">
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Renk</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="COLOR" id = "COLOR" value="{{item.width}}">
+                                </div>
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Yüzey</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="SURFACE_FINISH" id = "SURFACE_FINISH" value="{{item.height}}">
+                                </div>
+                        </div>
+                        
+                <!--    <div class="row col-md-12">
+                                <div class="input-group mb-1 col-md-6">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text">Yeni fotoğraf seçin</span>
+                                        </div>
+                                        <input type="file" class="form-control" name="IMAGE" id = "IMAGE">
+                                </div>
+                        </div> -->
+                                            
+                        <br>
+                        <button type="submit" class="btn btn-danger">Ürünü Güncelle</button>
+                </div>
+        </form>
+</div>
